@@ -1,0 +1,38 @@
+<div class="orderItem w-100 p-2 border-top">
+    <div class="d-flex flex-row">
+
+        <a href="/products/${item_category}/${item-url}" target="_blank">
+            <img src="${item-img}" style="width: 70px; height: 70px; object-fit: cover; margin-right: 10px;">
+        </a>
+
+        <div class="w-100 d-flex flex-column" style="font-size: 14px; padding-right: 10px; padding-left: 5px; height:85px; line-height: 1.2;">
+            
+            <a href="/products/${item_category}/${item-url}" target="_blank"><div class="orderItem-title">${item-title}</div></a>
+
+            <div class="d-flex flex-row align-items-center mt-auto">
+                <!-- <div id="quantity-${item_id}" class="mx-2">${item-quantity}</div> -->
+                <select item_id="${item_id}" class="my-2 ms-auto" style="width: 70px; margin-right: -25px;">
+                    <option value="1">1 шт</option>
+                    <option value="2">2 шт</option>
+                    <option value="3">3 шт</option>
+                    <option value="4">4 шт</option>
+                    <option value="5">5 шт</option>
+                    <option value="6">6 шт</option>
+                    <option value="7">7 шт</option>
+                    <option value="8">8 шт</option>
+                    <option value="9">9 шт</option>
+                    <option value="10">10 шт</option>
+                </select>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="ms-auto" style="margin-right: -25px;">${item-price} ₽</div>
+            </div>
+
+        </div>
+        <div class="orderItem-close-button" item_id="${item_id}" title="Удалить">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+            </svg>
+        </div>
+    </div>
+</div>

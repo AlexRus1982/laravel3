@@ -1,0 +1,53 @@
+.wishes-icon {
+    width: 60px;
+    height: 60px;
+    opacity: 1.0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    background: #26F;
+    color: #FFFFFF;
+    /* padding: 8px; */
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    /* box-shadow: 0px 0px 10px #00000000; */
+}
+
+.wishes-icon.hidden {
+    display: none;
+}
+
+.wishes-icon:hover {
+    cursor: pointer;
+    background: #00F;
+    /* transform: scale(1.2); */
+    /* box-shadow: 0px 0px 10px #0000007F; */
+}
+
+.wishes-count {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    margin: 40px 0px 0px 40px;
+    background: #FFF;
+    color: #000;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid #26F;
+    box-shadow: 0px 0px 10px #00000000;
+    justify-content: center;
+    transition: 0.3s;
+    align-items: center;
+}
+
+a .wishItem-title {
+    transition: 0.3s;
+}
+
+a .wishItem-title:hover {
+    color: var(--accent-color1);
+}
