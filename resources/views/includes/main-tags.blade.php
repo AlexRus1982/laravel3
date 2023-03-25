@@ -1,7 +1,7 @@
 <div class="tags-list w-100 d-flex flex-nowrap align-items-center ps-5" style="font-size: 14px; overflow-x: scroll;" draggable="false">
     <?php
         $categories = DB::table('categories')
-        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.category_id')
+        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.id')
         ->where('parent_id', 0)
         ->orderBy('order_place')
         ->get();
@@ -19,10 +19,9 @@
 <div class="tags-images w-100 d-flex flex-column">
     <?php
         foreach ($categories as $category) {
-            $categoryImage = $category->category_image != "" ? "/public/{$category->category_image}" : getImageNoPhoto();
             ?>
                 <a class="category-image-wrapper w-100" href="/categories/{{$category->category_url}}" target="_blank">
-                    <img src="{{$categoryImage}}" style="width: 100%; z-index: 1;">
+                    <img src="/public/{{$category->category_image}}" style="width: 100%; z-index: 1;">
                     <div class="category-image-text">
                         {{$category->category_name}}
                         <span class="ms-4">

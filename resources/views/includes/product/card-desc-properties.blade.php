@@ -29,9 +29,9 @@ $tags = DB::table('tags')
 
     characteristicsTitle.addEventListener('click', characteristicsTogglerDown);
     
-    descriptionTitle.addEventListener('click', descriptionTogglerUp);
+     descriptionTitle.addEventListener('click', descriptionTogglerUp);
     //Наведение мышкой
-    infoNal.addEventListener('mouseover', function(){
+  /* infoNal.addEventListener('mouseover', function(){
         lineRight.classList.remove('line-right');
         lineRight.classList.add('line-right-bold');
     });
@@ -49,7 +49,7 @@ $tags = DB::table('tags')
         lineRightDelivery.classList.add('line-right-bold-delivery');
     });
 
-  
+  */
 
 
     function descriptionTogglerDown() {
@@ -81,7 +81,7 @@ $tags = DB::table('tags')
  
     var module = document.querySelector(".box p");
 
-    $clamp(module, {
+   /* $clamp(module, {
         clamp: 3
-    });
+    });*/
 </script>
