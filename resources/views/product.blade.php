@@ -76,6 +76,8 @@ foreach ($SEO_PARAMS as $key => $value) {
 
     @include('includes.product.card-desc-images', ['product' => $product])
     @include('includes.product.card-desc-properties', ['product' => $product])
+    @include('includes.product.questions')
+    @include('includes.product.reviews')
     @include('includes.product.like')
     @include('includes.product.additions')
     @include('includes.product.see-before')
@@ -151,5 +153,6 @@ foreach ($SEO_PARAMS as $key => $value) {
 @endsection
 
 @push('js')
+
 <script type="text/javascript" src="/public/js/product.js"></script>
 @endpush

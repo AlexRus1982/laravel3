@@ -23,7 +23,11 @@
 </div>
 <div class="box similar-product__card-text">
   <p class="card__title">{{$item['Наименование']}}</p> 
-  <p class="card__price">{{$formatedPrice}} ₽</p> 
+  <p class="card__price">{{$formatedPrice}} ₽
+
+  </p> 
 </div> 
 </div>
 </a>
+
+

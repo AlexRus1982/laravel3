@@ -5,11 +5,11 @@ use Illuminate\Support\Str;
 $mysql = [
     'driver' => 'mysql',
     'url' => env('DATABASE_URL', ''),
-    'host' => 'smit215b.beget.tech',
+    'host' => 'localhost',
     'port' => '3306',
-    'database' => 'smit215b_im_test',
-    'username' => 'smit215b_im_test',
-    'password' => 'Zz654321',
+    'database' => 'internet-magazin',
+    'username' => 'root',
+    'password' => '',
     'unix_socket' => '' /*env('DB_SOCKET', '')*/,
     'charset' => 'utf8mb4',
     'collation' => 'utf8mb4_unicode_ci',
@@ -21,6 +21,14 @@ $mysql = [
         PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
     ]) : [],
 ];
+
+$server = strtolower($_SERVER['DOCUMENT_ROOT']);
+if (strpos($server, "ospanel") == false && $server != ""){
+    $mysql['host']     = 'localhost';
+    $mysql['database'] = 'smit215b_im2';
+    $mysql['username'] = 'smit215b_im2';
+    $mysql['password'] = 'Zz654321';
+}
 
 return [
 

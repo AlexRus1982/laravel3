@@ -18,12 +18,33 @@
         ->take(4)
         ->get();
     @endphp
-    
+    <style>
+       .product__cards-col-4_1200{
+        margin-left: auto;
+        margin-right: auto;
+        width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr 1fr);
+        justify-items: auto;
+        gap: 30px;
+    }
+    .product__cards-col-4_1400{
+        margin-left: auto;
+        margin-right: auto;
+        width: 1400px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr 1fr);
+        justify-items: auto;
+        gap: 30px;
+    }
+ </style>
+
+
     <h2 class="product__title">Похожие</h2>
-     <div class="container__similar-product">
+     <div class="product__cards-col-4_1400">
     
         @foreach($hits as $key=>$value)
-            @include('includes.products.card2', ['value' => $value])
+            @include('includes.products.card', ['value' => $value])
         @endforeach
     </div>
 

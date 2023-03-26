@@ -11,14 +11,7 @@ body {
 .filtr-sort{
    position: fixed; z-index: 1000; background: #FFF; opacity: 0.8; left: 0px; top: 0px;  border: 1px solid #939598; border-radius: 5px; height: 40px; padding: 2px 5px; font-size: 14px;
 }
-.filtr-sort:hover{
-    background-color: #000;
-    color:#ffffff;
-}
-.block-title {
-    font-weight: 900;
-    color: #000;
-}
+
 
 @media (min-width: 0px) and (max-width: 939px) {
     .block-title {
@@ -191,7 +184,32 @@ div.card:hover .wishButton,
 div.card:hover .basketButton {
     background-color: #000000;
 }
+@media (min-width: 0px) and (max-width: 1440px) {
+    .product__cards-col-5{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr);
+        justify-items: auto;
+        gap: 15px;
+    }
 
+
+    .product__cards-col-3{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 3fr 3fr 3fr);
+        justify-items: auto;
+        gap: auto;
+    }
+
+    .product__cards-col-4{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 2fr 2fr);
+        justify-items: auto;
+        gap: auto;
+    }
+}
 
 
 
