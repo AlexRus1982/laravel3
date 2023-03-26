@@ -1,6 +1,7 @@
 //----------------------------------------------------------------------------------------------------------
 //#region addition functions
 //----------------------------------------------------------------------------------------------------------
+const ImageNoPhotoPath = "images/no-photo.svg";
 function translit(word) {
     var converter = {
         'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd',
@@ -658,11 +659,12 @@ class AdminCatalog {
                         for(const item of list){
                             if (this.itemsInCategory?.indexOf(`${item.id}`) < 0 || this.itemsInCategory == null || this.itemsInCategory == undefined) {
                                 const photos = item['Фото товара'].split(';');
-                                let photo = '/public/images/no-photo.svg';
+                                let photo = ImageNoPhotoPath;
                                 let photoBorder = '';
                                 if (photos[0] != ''){
                                     let name = photos[0];
-                                    photo = `http://konsol-stol.ru/${name}`;
+                                    photo = `${name}`;
+                                    //photo = `http://konsol-stol.ru/${name}`;
                                     photoBorder = 'border: 1px solid #0000001F; object-fit: cover;';
                                 }
         
@@ -976,7 +978,7 @@ class AdminCatalog {
                     $('#CategoryUseDefaultMeta').prop('checked', (categoryInfo.category_use_default_meta == 1) );
                     updateMetaCheckers();
 
-                    const categoryImage = (categoryInfo.category_image != null) ? `${categoryInfo.category_image}` : '/public/images/no-photo.svg';
+                    const categoryImage = (categoryInfo.category_image != null) ? `${categoryInfo.category_image}` : ImageNoPhotoPath;
                     $('#catalog-image').attr('src', `/public/${categoryImage}`);
 
                     $('#catalogWindow #category_name').val(categoryInfo.category_name);
@@ -1217,7 +1219,8 @@ class AdminCatalog {
                     const photos = item['Фото товара'].split(';');
                     if (photos.length > 0 && photos[0] != ""){
                         for(const photo of photos){
-                            const photoURL = `http://konsol-stol.ru/${photo}`;
+                            const photoURL = `${photo}`;
+                            //const photoURL = `http://konsol-stol.ru/${photo}`;
                             $('#accordionImages .gallery').append(`
                                 <img src="${photoURL}" baseURL="${photo}" class="img-thumbnail shadow m-2" draggable="true" style="width: 150px; height: 150px;"/>
                             `);
@@ -1558,11 +1561,12 @@ class AdminCatalog {
                     if (items.length > 0){
                         for(const item of items){
                             const photos = item['Фото товара'].split(';');
-                            let photo = '/public/images/no-photo.svg';
+                            let photo = ImageNoPhotoPath;
                             let photoBorder = '';
                             if (photos[0] != ''){
                                 let name = photos[0];
-                                photo = `http://konsol-stol.ru/${name}`;
+                                photo = `${name}`;
+                                //photo = `http://konsol-stol.ru/${name}`;
                                 photoBorder = 'border: 1px solid #0000001F; object-fit: cover;';
                             }
         
@@ -1782,7 +1786,7 @@ class AdminCatalog {
                     let itemsHTML = ``;
                     for(const subCategory of subList){
                         const activity = (subCategory.category_active == '0') ? ' filter:grayscale(1);' : '';
-                        const image = (subCategory.category_image != null) ? `${subCategory.category_image}` : '/public/images/no-photo.svg';
+                        const image = (subCategory.category_image != null) ? `${subCategory.category_image}` : ImageNoPhotoPath;
                         itemsHTML += `
                             <div category_id="${subCategory.category_id}" class="category-card d-flex flex-column align-items-center border p-1 m-2" style="width: 200px;${activity}" draggable="true">
                                 <div class="category-card-header d-flex flex-row p-1 w-100">
@@ -1806,7 +1810,7 @@ class AdminCatalog {
 
                     let categoryURL = "/category";
                     if (mainCategory.length > 0){
-                        categoryURL = `/categories/${mainCategory[0].url}`;
+                        categoryURL = `/categories/${mainCategory[0].category_url}`;
                     }
 
                     $('#category-go-link').attr('link', categoryURL);
@@ -1837,11 +1841,12 @@ class AdminCatalog {
                         this.itemsInCategory.push(`${item.product_id}`);
 
                         const photos = item['Фото товара'].split(';');
-                        let photo = '/public/images/no-photo.svg';
+                        let photo = ImageNoPhotoPath;
                         let photoBorder = '';
                         if (photos[0] != ''){
                             let name = photos[0];
-                            photo = `http://konsol-stol.ru/${name}`;
+                            photo = `${name}`;
+                            //photo = `http://konsol-stol.ru/${name}`;
                             photoBorder = 'border: 1px solid #0000001F; object-fit: cover;';
                         }
     
@@ -2298,7 +2303,7 @@ class AdminTags {
                         $('#tag-image').attr('src', tag.tag_image);
                     }
                     else {
-                        $('#tag-image').attr('src', '/public/images/no-photo.svg');
+                        $('#tag-image').attr('src', ImageNoPhotoPath);
                     }
                     updateMetaCheckers();
                 },

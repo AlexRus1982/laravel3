@@ -1,4 +1,4 @@
-<div class="tags-list mb-4  d-flex flex-nowrap" style="font-size: 14px; overflow-x: scroll;" draggable="false">
+<div class="tags-list mb-4 d-flex flex-nowrap" style="font-size: 14px; overflow-x: scroll;" draggable="false">
     {{--
     <a href="/tags/all" class="tags-list-item tags-list-item-mobile active mb-2 px-3 py-1 rounded-0" style="white-space:nowrap;">
         Все

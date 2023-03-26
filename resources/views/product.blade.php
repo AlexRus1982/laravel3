@@ -153,6 +153,5 @@ foreach ($SEO_PARAMS as $key => $value) {
 @endsection
 
 @push('js')
-
 <script type="text/javascript" src="/public/js/product.js"></script>
 @endpush

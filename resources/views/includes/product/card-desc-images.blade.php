@@ -464,7 +464,7 @@ $tags = DB::table('tags')
 
     <div style="font-size: 14px; text-align: left; margin-bottom: 20px;"><span class=""><a class="bread-crumps__link" href="/categories/{{$product['category_url']}}">{{$product['category_name']}}</a> / Арт:{{$product['Артикул']}}</span></div>
     <div class="container__image photo-box" data-gallary>
-        <img class="image__big" src="http://konsol-stol.ru/{{$photos[0]}}" alt="картинка">
+        <img class="image__big" src="{{$photos[0]}}" alt="картинка">
         <div class="flex control-row">
             <img class="slider__button-right" data-control="next" src="{{asset('images/chevron-compact-right.svg')}}">
             <img class="slider__button-left" data-control="prev" src="{{asset('images/chevron-compact-left.svg')}}">
@@ -475,7 +475,8 @@ $tags = DB::table('tags')
             $index = 1;
             foreach ($photos as $photo) {
                 if ($photo != "") {
-                    $imageURL = "http://konsol-stol.ru/{$photo}";
+                    $imageURL = "{$photo}";
+                    //$imageURL = "http://konsol-stol.ru/{$photo}";
                     $active = ($index == 1) ? " active" : "";
                     $imageHTML = "<img class='image__small {$active}' src='{$imageURL}'>";
                     echo $imageHTML;

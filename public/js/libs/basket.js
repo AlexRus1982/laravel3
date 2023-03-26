@@ -77,7 +77,8 @@ export class Basket {
                 // if (idx > -1)
                 //     photo = photo.substr(0, idx) + "_small" + photo.substr(idx);
 
-                photoURL = `http://konsol-stol.ru/${photo}`;
+                //photoURL = `http://konsol-stol.ru/${photo}`;
+                photoURL = `${photo}`;
             }
             
             // console.info(item);

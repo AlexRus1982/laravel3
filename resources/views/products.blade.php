@@ -13,8 +13,22 @@ foreach ($list as $item) {
 
 // echo json_encode($category);
 $category_name = '';
+$parentCategory = null;
 if (isset($category)) {
     $category_name = $category->category_name;
+    $categoryInfo = DB::table('categories')
+    ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.category_id')
+    ->where('categories.category_id', $category->category_id)
+    ->first();
+
+    if ($categoryInfo->parent_id != 0){
+        $parentCategory = DB::table('categories')
+        ->where('category_id', $categoryInfo->parent_id)
+        ->first();
+    }
+
+    //dump($categoryInfo);
+    //dump($parentCategory);
 }
 
 $SEO_PARAMS = [];
@@ -172,15 +186,20 @@ foreach ($SEO_PARAMS as $key => $value) {
 
 <div class="container products-container w-100 d-flex justify-content-center flex-column align-self-center" style="align-items: start; max-width: 100%; padding: 0px 60px 0px 60px;">
     <div class="bread-crumps">
-        <span><a class="bread-crumps__link" href="/products">Каталог</a></span>
+        @if ($categoryInfo->parent_id == 0)
+            <span><a class="bread-crumps__link" href="/">Главная</a></span>
+        @else
+            <span><a class="bread-crumps__link" href="/categories/{{$parentCategory->category_url}}">{{$parentCategory->category_name}}</a></span>
+        @endif
         @if ($category_name != '')
         <span style="color: #000;">/</span>
         <span style="color: #000;">{{$category_name}}</span>
         @endif
     </div>
-    <div class="container__buttons display__none">
-        <h1 id="block-title-container" class="block-title-1 " style="margin-left: -4px;">{{$PAGE_TITLE_H1}}</h1>
-        <div id="filtr-sort-container" class="filtr-sort-nofixed d-flex flex-nowrap">
+
+    <div class="container__buttons">
+        <h1 class="block-title " style="margin-left: -4px;">{{$PAGE_TITLE_H1}}</h1>
+        <div id="filtr-sort-container" class="filtr-sort d-flex flex-nowrap">
             <div class="filter-list-icon-button px-3 d-flex justify-content-center align-items-center h-100" style="border-right: 1px solid #939598; min-width:100px; " data-bs-toggle="offcanvas" data-bs-target="#filterEdit" aria-controls="filterEdit">Фильтр</div>
             <div class="sort-list-icon-button px-3 d-flex justify-content-center align-items-center h-100" style="min-width:100px;" data-bs-toggle="offcanvas" data-bs-target="#sortDialog" aria-controls="sortDialog">Сортировка</div>
         </div>
@@ -188,6 +207,9 @@ foreach ($SEO_PARAMS as $key => $value) {
     <h1 id="block-title" class="block-title   my-4">{{$PAGE_TITLE_H1}}</h1>
 
     @include('includes.products.tags')
+    
+    @include('includes.products.subcategories', ['categoryInfo' => $categoryInfo])
+
     @include('includes.products.list', ['products' => $products])
 
     <div class="bread-cramps bread-cramps-mobile py-3" style="font-size: 14px;">
@@ -252,18 +274,13 @@ foreach ($SEO_PARAMS as $key => $value) {
             }
         }
     </style>
-   
 </div>
-
-
-
 
 {{--dd(Route::is('main'))--}}
 
 @endsection
 
 @push('js')
-
 <script type="text/javascript" src="/public/js/products.js"></script>
 <script>
     const col = document.querySelector('.col');

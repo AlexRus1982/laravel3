@@ -44,7 +44,7 @@
             </div>
             <button id="tag-image-button" type="button" class="btn btn-primary me-3">Загрузить картинку</button>
             <div class="pt-3">
-                <img id="tag-image" src="/public/images/no-photo.svg" style="width: 300px; height:300px; object-fit: contain;">
+                <img id="tag-image" src="" style="width: 300px; height:300px; object-fit: contain;">
             </div>
         </div>
 

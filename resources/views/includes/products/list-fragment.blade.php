@@ -348,7 +348,54 @@
     ?>
 
 
+<script>
+  
 
+
+
+   document.querySelector('#but_2').addEventListener('click', function(){
+    
+    document.querySelector('#col').classList.remove('product__cards-col-6');
+    document.querySelector('#col').classList.remove('product__cards-col-3');
+    document.querySelector('#col').classList.remove('product__cards-col-5');
+    document.querySelector('#col').classList.remove('product__cards-col-4');
+    document.querySelector('#col').classList.add('product__cards-col-2');
+});  
+document.querySelector('#but_5').addEventListener('click', function(){
+    
+        document.querySelector('#col').classList.remove('product__cards-col-6');
+        document.querySelector('#col').classList.remove('product__cards-col-3');
+        document.querySelector('#col').classList.add('product__cards-col-5');
+        document.querySelector('#col').classList.remove('product__cards-col-4');
+        document.querySelector('#col').classList.remove('product__cards-col-2');
+});
+document.querySelector('#but_6').addEventListener('click', function(){
+   
+        document.querySelector('#col').classList.remove('product__cards-col-3');
+        document.querySelector('#col').classList.remove('product__cards-col-5');
+        document.querySelector('#col').classList.add('product__cards-col-6');
+        document.querySelector('#col').classList.remove('product__cards-col-4');
+        document.querySelector('#col').classList.remove('product__cards-col-2');
+});
+document.querySelector('#but_3').addEventListener('click', function(){
+    
+        document.querySelector('#col').classList.remove('product__cards-col-6');
+        document.querySelector('#col').classList.remove('product__cards-col-5');
+        document.querySelector('#col').classList.add('product__cards-col-3');
+        document.querySelector('#col').classList.remove('product__cards-col-4');
+        document.querySelector('#col').classList.remove('product__cards-col-2');
+});
+document.querySelector('#but_4').addEventListener('click', function(){
+    
+    document.querySelector('#col').classList.remove('product__cards-col-6');
+    document.querySelector('#col').classList.remove('product__cards-col-5');
+    document.querySelector('#col').classList.add('product__cards-col-3');
+    document.querySelector('#col').classList.add('product__cards-col-4');
+    document.querySelector('#col').classList.remove('product__cards-col-2');
+});
+
+
+</script>
     <?
 
     foreach ($products as $key => $value) {

@@ -4,7 +4,7 @@
     //$photos = explode(';', $photos);
     //$image = $photos[0];
     //if ($image != ""){
-    //    //$imageURL = "http://konsol-stol.ru/{$image}";
+    //    //$imageURL = "{$image}";
     //    $imageURL = "https://fakeimg.pl/300x300/7F7FFF/FFFFFF/?text={$image}&font=kelson";
     //}
     //else {

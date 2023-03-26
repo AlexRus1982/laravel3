@@ -14,6 +14,17 @@
     </div>
 
     <style>
+        .show-more-button-wrapper{
+            margin-left: auto;
+            margin-right: auto;
+            width: 1400px;
+        }
+        .paggination{
+            margin-left: auto;
+            margin-right: auto;
+            width: 1400px;  
+        }
+
         #show-more-button {
             background: #F1F2F2;
             color: #000;

@@ -1,5 +1,4 @@
 <?php
-    // try to merge brunches
     // Auth::routes();
     // Route::get('/home', 'HomeController@index')->name('home');
 

@@ -22,7 +22,7 @@
 
                     <?php
                         $categories = DB::table('categories')
-                        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.id')
+                        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.category_id')
                         ->where('parent_id', $parentId)
                         ->orderBy('order_place')
                         ->get();
@@ -90,7 +90,7 @@
 
                     <?php
                         $categories = DB::table('categories')
-                        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.id')
+                        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.category_id')
                         ->where('parent_id', $parentId)
                         ->orderBy('order_place')
                         ->get();
@@ -205,7 +205,7 @@
                         ?>
                             <a href="{{$file_link}}">
                                 <span class="social me-2">
-                                    <?//echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . $file_store)?>
+                                    <?echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . $file_store)?>
                                 </span>
                             </a>
                         <?

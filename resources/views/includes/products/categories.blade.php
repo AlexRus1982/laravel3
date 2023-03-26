@@ -2,7 +2,7 @@
     <?php
         // $id = 0;
         $categories = DB::table('categories')
-        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.id')
+        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.category_id')
         ->where('parent_id', $id)
         ->orderBy('order_place')
         ->get();

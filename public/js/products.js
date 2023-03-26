@@ -26,14 +26,18 @@ class ProductsScript {
         $(".tags-list-item").attachDragger();
 
         const updateFiltrSortElementPosition = function() {
-
+            if ($("#show-more-button-container").first().length == 0) {
+                $('#filtr-sort-container').css('top', '-300px');
+                return;
+            }
+            
             let viewHeight = document.body.clientHeight; // Высота экрана 
             let viewWidth = document.body.clientWidth; // Ширина экрана
 
             let elementHeight = $('#filtr-sort-container').height();
             let elementWidth = $('#filtr-sort-container').width();
 
-            const showMoreButtonTop = $("#show-more-button").first().offset().top - $(this).scrollTop();
+            const showMoreButtonTop = $("#show-more-button-container").first().offset().top - $(this).scrollTop();
             const diffHeight = showMoreButtonTop - viewHeight;
 
             let elementTop = viewHeight - elementHeight - 40;
@@ -54,6 +58,7 @@ class ProductsScript {
 
         $(window).on('scroll', updateFiltrSortElementPosition);
         $(window).on('resize', updateFiltrSortElementPosition);
+        document.addEventListener("DOMContentLoaded", updateFiltrSortElementPosition);
     }
 
     MakeKeys(){
@@ -133,6 +138,7 @@ class ProductsScript {
 
     CheckShowMoreButton() {
         const lastPage = $('.page-item').last().hasClass('disabled');
+        console.debug(lastPage);
         if (lastPage) {
             $('#show-more-button').hide();
         }

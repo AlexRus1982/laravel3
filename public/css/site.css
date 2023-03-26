@@ -12,6 +12,14 @@ body {
    position: fixed; z-index: 1000; background: #FFF; opacity: 0.8; left: 0px; top: 0px;  border: 1px solid #939598; border-radius: 5px; height: 40px; padding: 2px 5px; font-size: 14px;
 }
 
+.filtr-sort:hover{
+    background-color: #000;
+    color:#ffffff;
+}
+.block-title {
+    font-weight: 900;
+    color: #000;
+}
 
 @media (min-width: 0px) and (max-width: 939px) {
     .block-title {
