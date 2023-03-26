@@ -204,7 +204,6 @@ foreach ($SEO_PARAMS as $key => $value) {
             <div class="sort-list-icon-button px-3 d-flex justify-content-center align-items-center h-100" style="min-width:100px;" data-bs-toggle="offcanvas" data-bs-target="#sortDialog" aria-controls="sortDialog">Сортировка</div>
         </div>
     </div>
-    <h1 id="block-title" class="block-title   my-4">{{$PAGE_TITLE_H1}}</h1>
 
     @include('includes.products.tags')
     
