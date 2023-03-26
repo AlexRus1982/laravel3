@@ -5,26 +5,15 @@
     @include('includes.products.list-fragment', ['products' => $products, 'fragment' => 2])
     @include('includes.products.list-fragment', ['products' => $products, 'fragment' => 1])-->
 
-    <div id="show-more-button-container" class="show-more-button-wrapper">
+    <div class="show-more-button-wrapper" style="width:1400px; margin-left:auto;margin-right:auto">
         <button id="show-more-button" type="button" class="w-100 btn btn-dark m-0 fw-bold py-3 px-5">Показать ещё</button>
     </div>
 
-    <div class="paggination pt-3 pb-4 " style="overflow-x: auto;">
+    <div class="paggination pt-3 pb-4 " style="width:1400px; overflow-x: auto;margin-left:auto;margin-right:auto">
         {{ $products->appends(['products' => request()->products])->links() }}
     </div>
 
     <style>
-        .show-more-button-wrapper{
-            margin-left: auto;
-            margin-right: auto;
-            width: 1400px;
-        }
-        .paggination{
-            margin-left: auto;
-            margin-right: auto;
-            width: 1400px;  
-        }
-
         #show-more-button {
             background: #F1F2F2;
             color: #000;

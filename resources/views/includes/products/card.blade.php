@@ -15,6 +15,7 @@ try {
 
 $wished = (in_array($item_id, $wishList)) ? 'wishset' : '';
 ?>
+
 <style>
     .bg-container {
         position: relative;
@@ -22,18 +23,7 @@ $wished = (in_array($item_id, $wishList)) ? 'wishset' : '';
         min-height: 400px;
     }
 
-    .card-title {
-        font-size: 14px;
-        color: #000000;
-        text-align: start;
-        height: 40;
-        margin: 0;
-        line-height: 20px;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
-    }
+
 
     .card-title:hover {
         color: #0000FF;
@@ -53,6 +43,11 @@ $wished = (in_array($item_id, $wishList)) ? 'wishset' : '';
         text-align: center;
     }
 
+    .img {
+        width: 100%;
+        height: 100%;
+    }
+
     .pos {
         position: relative;
 
@@ -60,39 +55,112 @@ $wished = (in_array($item_id, $wishList)) ? 'wishset' : '';
 
     .card__heart {
         position: absolute;
-        top: 85%;
-        left: 6%;
+        bottom: 5px;
+        left: 5px;
     }
-
+    .card__heart-top {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+    .card__heart-center {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+    }
+    .card__heart-center-top {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+    }
+    .card__heart-center-top:hover {
+        fill: red;
+    }
+    .card__heart-top:hover {
+        fill: red;
+    }
     .card__heart:hover {
         fill: red;
     }
 
-  .card-grid {
+    .card__heart-center:hover {
+        fill: red;
+    }
+
+
+    .card-grid {
         display: flex;
         flex-direction: column;
     }
-</style>
-<a class="card normal-card" target="_blank" rel="noopener noreferrer" href="/products/{{$item['category_url']}}/{{$item['URL адрес']}}" style="text-decoration: none; color: #000000; border:none; background: none; border-radius: 0px;">
-    <div class="card-grid card-wrapper border-0 p-0" >
-        <div class="pos">
+
+    .button-handler {
+        background-color: green;
+
+    }
+    .card__text{
+        text-align: start;
+        font-size: 14px;
+        font-weight:
+            600;
+        margin: 0;
+        margin-top: 15px;
+        color: #000000;  
+    }
+    .card__text-left.card__text-left.card__text-left {
+        text-align: start;
+     
+    }
+
+    .card__text-center.card__text-center.card__text-center {
+        text-align: center;
+    
+    }
+    .card-title {
+        font-size: 14px;
+        color: #000000;
+        text-align: start;
+        height: 40;
+        margin: 0;
+        line-height: 20px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+
+
+    .card-title-left {
+    text-align: start;
        
-                <img src="{{$imageURL}}" class="card-img-top" alt="{{$item['Наименование']}}" loading="lazy" style="height: 100%; width: 100%; object-fit: contain; border-radius: 0px;">
-                <svg class="card__heart" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000" class="bi bi-heart" viewBox="0 0 16 16">
-                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                </svg>
-            
+    }
+
+    .card-title-center {
+      text-align: center;
+      
+    }
+    .border{
+        padding-bottom: 30px;
+        border-bottom: solid 1px grey;
+    }
+</style>
+<a class="normal-card border" target="_blank" rel="noopener noreferrer" href="/products/{{$item['category_url']}}/{{$item['URL адрес']}}" style="text-decoration: none; color: #000000; border:none; background: none; border-radius: 0px;">
+    <div class="card-grid card-wrapper border-0 p-0">
+        <div class="pos">
+
+            <img src="{{$imageURL }}" class="card-img-top" alt="{{$item['Наименование']}}" loading="lazy" style="height: 100%; width: 100%; object-fit: contain; border-radius: 0px;">
+            <svg class="card__heart" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000" class="bi bi-heart" viewBox="0 0 16 16">
+                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            </svg>
+
         </div>
         <div class="card-body d-flex flex-column p-0">
-            <p class="card-text" style="text-align: start; font-size: 14px; font-weight: 600; margin: 0; margin-top: 15px; color: #000000;">{{$formatedPrice}} ₽
+            <p class="card__text">{{$formatedPrice}} ₽
                 {{--<strike class="ms-3">20 000 руб</strike>--}}
             </p>
 
             <h6 class="card-title mb-auto">{{$item['Наименование']}}</h6>
 
-            {{--<!-- <button type="button" class="basketButton btn btn-dark" item_id="{{ $item_id }}" style="border-color: white; white-space: nowrap; font-weight: 600;">
-            Купить
-            </button> -->--}}
+          
         </div>
     </div>
 

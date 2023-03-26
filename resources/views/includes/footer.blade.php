@@ -1,4 +1,4 @@
-<footer class="d-flex flex-column border-top mobile-padding-10" style="padding: 0px 60px 0px 60px; overflow-x: hidden;">
+<footer class="d-flex flex-column border-top mobile-padding-10" style="padding: 0px 60px 0px 60px; overflow-x: hidden; margin-top:40px">
     <div class="footer-logo w-100" style="padding: 50px 0px 70px 0px; overflow: hidden;"><div class="footer-logo-text" style="transform: scaleX(1.0) scaleY(1.0); margin-left: -10px;">LEGER.MARKET</div></div>
 
     <div class="footer__container footer__container-desktop py-5">
@@ -12,17 +12,17 @@
                     @else
                     <? 
                         if(isset($id)) {
-                            $parentId = $id; 
+                        $parentId = $id; 
                         }
                         else {
-                            $parentId = 0;
+                        $parentId = 0;
                         }
                     ?>
                     @endif
 
                     <?php
                         $categories = DB::table('categories')
-                        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.category_id')
+                        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.id')
                         ->where('parent_id', $parentId)
                         ->orderBy('order_place')
                         ->get();
@@ -90,7 +90,7 @@
 
                     <?php
                         $categories = DB::table('categories')
-                        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.category_id')
+                        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.id')
                         ->where('parent_id', $parentId)
                         ->orderBy('order_place')
                         ->get();
@@ -205,7 +205,7 @@
                         ?>
                             <a href="{{$file_link}}">
                                 <span class="social me-2">
-                                    <?echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . $file_store)?>
+                                    <?//echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . $file_store)?>
                                 </span>
                             </a>
                         <?

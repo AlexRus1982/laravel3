@@ -13,7 +13,7 @@ class WebController extends Controller
     #region admin functions
     public function categories() {
         $categories = DB::table('categories')
-        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.category_id')
+        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.id')
         ->orderBy('order_place')
         ->get();
 
@@ -55,7 +55,7 @@ class WebController extends Controller
         ->get();
 
         $categories = DB::table('categories')
-        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.category_id')
+        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.id')
         ->where('parent_id', $id)
         ->orderBy('order_place')
         ->get();
@@ -65,7 +65,7 @@ class WebController extends Controller
 
     public function categoryInfo($id) {
         $categories = DB::table('categories')
-        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.category_id')
+        ->join('hierarchy_category', 'categories.category_id', '=', 'hierarchy_category.id')
         ->where('categories.category_id', $id)
         ->get();
 

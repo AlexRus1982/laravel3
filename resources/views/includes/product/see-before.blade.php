@@ -16,16 +16,14 @@
     ->get();
 ?>
 @if (count($list))
-    <div class="py-2 w-100" style="border-top: 1px solid var(--block-divider-liner-color);">
-        <h2 class="block-title d-flex flex-row mt-3">Смотрели ранее</h2>
-
-        <div class="desktop-block flex-row w-100 justify-content-start flex-wrap pb-3">
+<h2 class="product__title">Смотрели ранее</h2>
+    <div class="product__cards-col-4_1200">
             @foreach($list as $key=>$value)
                 @include('includes.products.card', ['value' => $value])
             @endforeach
         </div>
 
-        <div class="mobile-block" style="overflow-x: auto;">
+        <!--<div class="mobile-block" style="overflow-x: auto;">
             <div class="d-flex pb-3" style="user-select: none; margin-left: 10px;">
                 @foreach($list as $key=>$value)
                     @include('includes.product.mini-card', ['value' => $value])
@@ -33,4 +31,4 @@
             </div>
         </div>
     </div>
-@endif
+@endif-->
