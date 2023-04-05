@@ -1,6 +1,11 @@
 /*------------------------------------------*/
 /* #region main section                     */
 /*------------------------------------------*/
+@font-face {
+    font-family: "TildaSans";
+    src: local("TildaSans"), url("../fonts/vendor/@fortawesome/fontawesome-free/TildaSans-Light.ttf");
+  }
+
 * {
     color: #000;
 }

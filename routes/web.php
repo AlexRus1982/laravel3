@@ -4,6 +4,9 @@
 // Route::get('/home', 'HomeController@index')->name('home');
 
 #region main requests
+Route::get('/reviews',function(){
+return view('reviews');
+});
 Route::get   ('/', 'Products@showMain')->name('main');
 
 Route::get   ('/products', 'Products@showAll')->name('products');

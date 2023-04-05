@@ -22,13 +22,13 @@ $mysql = [
     ]) : [],
 ];
 
-$server = strtolower($_SERVER['DOCUMENT_ROOT']);
+/*$server = strtolower($_SERVER['DOCUMENT_ROOT']);
 if (strpos($server, "ospanel") == false && $server != ""){
     $mysql['host']     = 'localhost';
     $mysql['database'] = 'smit215b_im2';
     $mysql['username'] = 'smit215b_im2';
     $mysql['password'] = 'Zz654321';
-}
+}*/
 
 return [
 
