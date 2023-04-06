@@ -9,7 +9,7 @@
 
     .reviews {
         display: flex;
-        width: 659px;
+        max-width: 1200px;
         flex-direction: column;
 
     }

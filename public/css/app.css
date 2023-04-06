@@ -1,1 +1,18 @@
+.bread-crumps__link {
+    color: #000;
+    text-decoration: none;
+}
 
+.bread-crumps__link:hover {
+    color: #0000FF;
+}
+
+.bread-crumps {
+    font-size: 14px;
+    width: 1400px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: flex-start;
+
+}

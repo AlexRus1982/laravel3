@@ -7,6 +7,9 @@
 Route::get('/reviews',function(){
 return view('reviews');
 });
+Route::get('/shourum',function(){
+    return view('shourum');
+    });
 Route::get   ('/', 'Products@showMain')->name('main');
 
 Route::get   ('/products', 'Products@showAll')->name('products');
