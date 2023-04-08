@@ -1,31 +1,35 @@
 
-
-require('./bootstrap');
-
-
-
-
-
+   
 window.Vue = require('vue').default;
+import VueRouter from 'vue-router'
 
-//register component
+Vue.use(VueRouter)
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// const files = require.context('./', true, /\.vue$/i);
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
-
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
-
+const routes = [
+  { path: '/', component: require('./components/Contacts.vue').default },
+  { path: '/user', component: require('./components/Moscow.vue').default }
+]
+  
+const router = new VueRouter({
+  routes 
+})
 
 const app = new Vue({
-    el: '#app',
-    
-});
+    data: {
+        
+     },
+     methods: {
+        toggle: function() {
+         /* const list = document.querySelectorAll('.panel__table  li')
+          console.log(list);
+           list.forEach(item =>{ 
+                 item.addEventListener('click',function(){
+                 
+                  list.forEach(el=>{ el.classList.remove('active'); });
+                  item.classList.add('active')
+              
+           })})*/
+        }
+    },
+  router
+}).$mount('#app')

@@ -14,7 +14,7 @@
     }
 
     .shourum__title {
-        margin-bottom: 50px;
+        margin-bottom: 15px;
         color: #000000;
         font-size: 30px;
         font-family: 'TildaSans', Arial, sans-serif;
@@ -38,7 +38,7 @@
     .shourum__container-data {
         display: flex;
         flex-direction: column;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
 
     .container-data__row {
@@ -58,6 +58,15 @@
     .shourum__image {
         width: 136px;
         height: 136px;
+    }
+
+    .shourum__image_car {
+        width: 136px;
+        height: 136px;
+        position: absolute;
+        top: 7px;
+        left: 0;
+
     }
 
     .container-data__row__text {
@@ -85,6 +94,7 @@
     }
 
     .shourum__content-grey {
+
         min-height: 400px;
         width: 48%;
         display: flex;
@@ -186,7 +196,22 @@
 
     }
 
+    .container__image {
+        width: 136px;
+        height: 136px;
+        position: relative;
+    }
+
     .metr {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        padding-bottom: auto;
+        padding-top: auto;
+        width: 70px;
+        height: 30px;
+        text-align: center;
         margin-left: 10px;
         color: #000000;
         font-size: 14px;
@@ -255,7 +280,9 @@
     <h2 class="shourum__title shourum__title_get">Легко добраться</h2>
     <div class="container-data__row container-data__row_grey">
         <div class="shourum__content-grey ">
-            <img class="shourum__image" src="https://thumb.tildacdn.com/tild3763-3337-4939-b835-653438303732/-/resize/163x/-/format/webp/ExecutiveCar_Black_i.png" alt="картинка">
+            <div class="container__image">
+                <img class="shourum__image shourum__image_car" src="https://thumb.tildacdn.com/tild3763-3337-4939-b835-653438303732/-/resize/163x/-/format/webp/ExecutiveCar_Black_i.png" alt="картинка">
+            </div>
             <span class="content-grey__title">На машине</span>
             <p class="content-grey__text">Тыры-пыры, текст о том как можно к нам доехать.
                 Обязательный текст о парковке.</p>
@@ -276,37 +303,37 @@
     <div id="player1" class="player"></div>
 
 
-    <h2 class="shourum__title shourum__title_get">Фото шоу-рума <span class="metr"> 256м</span></h2>
-</div>
-<div class="container__gallery">
-    <div class="gal">
-        <a data-fancybox="gallery" data-src="https://thumb.tildacdn.com/tild3733-3239-4530-a634-303030366338/-/resize/465x/-/format/webp/artfabric_furniture_.jpg">
+    <h2 class="shourum__title shourum__title_get">Фото шоу-рума <span class="metr"><span> 256м</span></span></h2>
 
-            <img class="gal-img" src="https://thumb.tildacdn.com/tild3733-3239-4530-a634-303030366338/-/resize/465x/-/format/webp/artfabric_furniture_.jpg" />
-        </a>
-    </div>
-    <div class="gal">
-        <a data-fancybox="gallery" data-src="https://thumb.tildacdn.com/tild3136-6338-4361-b563-623839346638/-/resize/465x/-/format/webp/artfabric_furniture_.jpg">
-            <img class="gal-img" src="https://thumb.tildacdn.com/tild3136-6338-4361-b563-623839346638/-/resize/465x/-/format/webp/artfabric_furniture_.jpg" />
-        </a>
-    </div>
-    <div class="gal">
-        <a data-fancybox="gallery" data-src="https://thumb.tildacdn.com/tild3561-6530-4563-b432-623837633230/-/resize/465x/-/format/webp/artfabric_furniture_.jpg">
-            <img class="gal-img" src="https://thumb.tildacdn.com/tild3561-6530-4563-b432-623837633230/-/resize/465x/-/format/webp/artfabric_furniture_.jpg" />
-        </a>
-    </div>
-    <div class="gal">
-        <a data-fancybox="gallery" data-src="https://thumb.tildacdn.com/tild3561-6530-4563-b432-623837633230/-/resize/465x/-/format/webp/artfabric_furniture_.jpg">
-            <img class="gal-img" src="https://thumb.tildacdn.com/tild3561-6530-4563-b432-623837633230/-/resize/465x/-/format/webp/artfabric_furniture_.jpg" />
-        </a>
-    </div>
-    <div class="gal">
-        <a data-fancybox="gallery" data-src="https://thumb.tildacdn.com/tild3561-6530-4563-b432-623837633230/-/resize/465x/-/format/webp/artfabric_furniture_.jpg">
-            <img class="gal-img" src="https://thumb.tildacdn.com/tild3561-6530-4563-b432-623837633230/-/resize/465x/-/format/webp/artfabric_furniture_.jpg" />
-        </a>
+    <div class="container__gallery">
+        <div class="gal">
+            <a data-fancybox="gallery" data-src="https://thumb.tildacdn.com/tild3733-3239-4530-a634-303030366338/-/resize/465x/-/format/webp/artfabric_furniture_.jpg">
+
+                <img class="gal-img" src="https://thumb.tildacdn.com/tild3733-3239-4530-a634-303030366338/-/resize/465x/-/format/webp/artfabric_furniture_.jpg" />
+            </a>
+        </div>
+        <div class="gal">
+            <a data-fancybox="gallery" data-src="https://thumb.tildacdn.com/tild3136-6338-4361-b563-623839346638/-/resize/465x/-/format/webp/artfabric_furniture_.jpg">
+                <img class="gal-img" src="https://thumb.tildacdn.com/tild3136-6338-4361-b563-623839346638/-/resize/465x/-/format/webp/artfabric_furniture_.jpg" />
+            </a>
+        </div>
+        <div class="gal">
+            <a data-fancybox="gallery" data-src="https://thumb.tildacdn.com/tild3561-6530-4563-b432-623837633230/-/resize/465x/-/format/webp/artfabric_furniture_.jpg">
+                <img class="gal-img" src="https://thumb.tildacdn.com/tild3561-6530-4563-b432-623837633230/-/resize/465x/-/format/webp/artfabric_furniture_.jpg" />
+            </a>
+        </div>
+        <div class="gal">
+            <a data-fancybox="gallery" data-src="https://thumb.tildacdn.com/tild3561-6530-4563-b432-623837633230/-/resize/465x/-/format/webp/artfabric_furniture_.jpg">
+                <img class="gal-img" src="https://thumb.tildacdn.com/tild3561-6530-4563-b432-623837633230/-/resize/465x/-/format/webp/artfabric_furniture_.jpg" />
+            </a>
+        </div>
+        <div class="gal">
+            <a data-fancybox="gallery" data-src="https://thumb.tildacdn.com/tild3561-6530-4563-b432-623837633230/-/resize/465x/-/format/webp/artfabric_furniture_.jpg">
+                <img class="gal-img" src="https://thumb.tildacdn.com/tild3561-6530-4563-b432-623837633230/-/resize/465x/-/format/webp/artfabric_furniture_.jpg" />
+            </a>
+        </div>
     </div>
 </div>
-
 <h2 class="shourum__title shourum__title_get px-5">Панорама шоурума</h2>
 <div id="player2" class="player player_1600 px-5"></div>
 
