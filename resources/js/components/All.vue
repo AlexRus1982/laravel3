@@ -5,6 +5,10 @@
             8 (800) 511−1075</h1>
         <City city="Москва" />
         <City city="Москва" />
+        <City city="Санкт-Петербург" />
+        <Contacts/>
+        <Requisites/>
+           <Map/>
     </div>
 </template>
 <style scoped>
@@ -16,11 +20,17 @@
 </style>
 <script>
 import City from '../components/City.vue';
-
+import Contacts from '../components/Contacts.vue';
+import Requisites from '../components/Requisites.vue';
+import Map from '../components/Map.vue';
+import Sklad from '../components/Sklad.vue';
 export default {
 
     components: {
-    City
+        Contacts,
+        Requisites,
+        Map,
+       City
     },
 
 

@@ -125,6 +125,7 @@
 
   a {
     color: black;
+    width: 16.66%;
   }
 
   a:hover {
@@ -186,15 +187,19 @@
 
   .shourums__panel {
     display: flex;
-    width: 100%;
+   max-width: 1400;
     margin: 0;
     padding: 0;
+  
+  
   }
 
   .panel__table {
     display: flex;
-    width: 100%;
+    max-width: 1400px;
     padding: 0;
+    margin-bottom:40px;
+    
   }
 
   .active.active.active {
@@ -203,12 +208,15 @@
   }
 
   .table__col {
-    display: table-cell;
+    
+   
+    display: flex;
+    justify-content: center;
     vertical-align: middle;
     position: relative;
-    min-width: fit-content;
+  
     border: 1px solid #222222;
-    width: 16rem;
+  
     border-right: none;
     cursor: pointer;
     padding-top: 14px;
@@ -217,13 +225,23 @@
 
   .table__col_end.table__col_end.table__col_end {
     border-right: 1px solid #222222;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
+  .table__col_start.table__col_start.table__col_start {
 
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
   .router-link-active {}
 
   .router-link-exact-active {
     color: white;
     background-color: black;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
 
   .router-link-exact-active:hover {
@@ -235,31 +253,31 @@
   <div class="shourums__bread-crumps">
     <span style="color:black;"><a class="shourums__bread-crumps__link" href="/products">Каталог</a>/шоурумы</span>
   </div>
-  <h1 class="shourums__title">Шоу-рум на Шелепихина</h1>
-  <div class="shourums__panel">
+  <h1 class="shourums__title">Наши шоу-румы и контакты</h1>
+  
     <ul class="panel__table">
 
       <router-link to="/">
-        <li class="table__col ">Все</li>
+        <li class="table__col table__col_start">Все</li>
       </router-link>
-      <router-link to="/user">
+      <router-link to="/Moscow">
         <li class="table__col">Москва</li>
       </router-link>
-      <router-link to="/user3">
+      <router-link to="/SanctPeterburg">
         <li class="table__col">Санкт-Петербург</li>
       </router-link>
 
-      <router-link to="/user4">
+      <router-link to="/Sklad">
         <li class="table__col">Склад</li>
       </router-link>
-      <router-link to="/user5">
+      <router-link to="/Contacts">
         <li class="table__col">Контакты</li>
       </router-link>
-      <router-link to="/about">
+      <router-link to="/Requisites">
         <li class="table__col table__col_end">Реквизиты</li>
       </router-link>
     </ul>
-  </div>
+
 
 
   <router-view></router-view>

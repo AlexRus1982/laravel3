@@ -5,25 +5,34 @@
         <span class="container-data__row__text">По общим вопросам: info@artfc.ru</span>
         <span class="container-data__row__text container-data__row__text_bold">Подписывайтесь на наши соцсети:</span>
         <div class="social__conatiner">
-            <img class="social__icon"
+           <a href="https://www.instagram.com"> <img class="social__icon"
                 src="https://thumb.tildacdn.com/tild6465-3538-4931-b938-613762313634/-/resize/60x/-/format/webp/1491580635-yumminkys.png"
-                alt="">
+                alt="instagram">
+            </a>
+            <a href="https://www.vk.com">
             <img class="social__icon"
                 src="https://thumb.tildacdn.com/tild3132-3061-4430-b265-656334346562/-/resize/60x/-/format/webp/1486147202-social-me.png"
-                alt="">
+                alt="vk">
+                </a>
+                <a href="https://www.youtube.com/">
             <img class="social__icon"
                 src="https://thumb.tildacdn.com/tild3137-6135-4563-b263-643839303865/-/resize/60x/-/format/webp/1491580651-yumminkys.png"
-                alt="">
+                alt="Yotube">
+                </a>
+                <a href="https://web.telegram.org/">
             <img class="social__icon"
                 src="https://thumb.tildacdn.com/tild3164-6164-4638-a131-613063386431/-/resize/60x/-/format/webp/telegram_logo_icon_1.png"
-                alt="">
+                alt="telegram">
+            </a>
         </div>
     </div>
 </template>
 <style scoped>
 .social__icon {
     width: 50px;
-    height: 50px
+    height: 50px;
+    cursor:pointer;
+
 }
 
 .social__conatiner {
@@ -34,7 +43,7 @@
 }
 
 .shourum__content-grey_contact {
-    min-height: 400px;
+    min-height: 300px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -47,7 +56,7 @@
     background-position: center center;
     border-color: transparent;
     border-style: solid;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .container-data__city {

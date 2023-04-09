@@ -28,7 +28,7 @@
 }
 
 .shourum__content-grey_requisites {
-    min-height: 400px;
+    min-height: 300px;
     width: 100%;
     display: flex;
     flex-direction: column;

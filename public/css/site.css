@@ -6,8 +6,8 @@
     src: local("TildaSans"), url("../fonts/vendor/@fortawesome/fontawesome-free/TildaSans-Light.ttf");
   }
 
-* {
-    color: #000;
+a{
+    color:#000;
 }
 
 body {
