@@ -51,6 +51,53 @@ class Products extends Controller
         ->view('main')
         ->cookie('cookie-uuid', Config::get('cookie-uuid'), Products::cookieUuidLifeTime);
     }
+   
+    public function showProjects($category_url, $url){
+        $this->checkCookieUuid();
+        // $category = DB::table('categories')
+        // ->where('category_url', $category_url)
+        // ->first();
+
+        // $item = DB::table('catalog')
+        // ->where('URL адрес', $url)
+        // ->first();
+
+        $item = DB::table('hierarchy_products')
+        ->join('categories', 'categories.category_id', '=', 'hierarchy_products.parent_id')
+        ->join('catalog', 'catalog.id', '=', 'hierarchy_products.product_id')
+        ->where('categories.category_url', $category_url)
+        ->where('catalog.URL адрес', $url)
+        ->first();
+
+        if ($item){
+            return response()
+            ->view('projects', ['product' => (array)$item])
+            ->cookie('cookie-uuid', Config::get('cookie-uuid'), Products::cookieUuidLifeTime);
+        }
+        else {
+            return view('errors.404');
+        }
+    }
+
+    public function ProjectsshowAll(Request $request){
+        $this->checkCookieUuid();
+
+        // Log::debug(json_encode($request->cookie()));
+
+        $id = 1;
+        $items = DB::table('catalog')
+        ->join('hierarchy_products', 'catalog.id', '=', 'hierarchy_products.product_id')
+        ->where('hierarchy_products.parent_id', $id)
+        ->orderBy('order_place')
+        ->paginate(3);
+
+        // $table = DB::table('catalog')->paginate(32);
+        // $table = DB::table('catalog')->take(20)->get();
+        return response()
+        ->view('projects', ['products' => $items, 'id' => $id])
+        ->cookie('cookie-uuid', Config::get('cookie-uuid'), Products::cookieUuidLifeTime);
+    }
+
 
     public function showAll(Request $request){
         $this->checkCookieUuid();

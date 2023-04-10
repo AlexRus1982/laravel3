@@ -88,7 +88,7 @@
         <div class="main-content d-flex flex-column justify-content-between min-vh-100 text-center">
             @include('includes.header')
     
-            <main class="d-flex flex-column flex-grow-1"> 
+            <main class="d-flex flex-column " > 
                 @yield('content')
           
             </main>

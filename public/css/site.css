@@ -11,12 +11,27 @@ a{
 }
 
 body {
+    height: auto;
     overflow-x: hidden;
 }
 .filtr-sort{
    position: fixed; z-index: 1000; background: #FFF; opacity: 0.8; left: 0px; top: 0px;  border: 1px solid #939598; border-radius: 5px; height: 40px; padding: 2px 5px; font-size: 14px;
 }
+.bread-crumps {
+    font-size: 14px;
+    max-width: 1400px;
+    display: flex;
+    justify-content: flex-start;
 
+}
+.bread-crumps__link {
+    color: #000;
+    text-decoration: none;
+}
+
+.bread-crumps__link:hover {
+    color: #0000FF;
+}
 
 @media (min-width: 0px) and (max-width: 939px) {
     .block-title {

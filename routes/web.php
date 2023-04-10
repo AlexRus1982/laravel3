@@ -10,9 +10,10 @@ return view('reviews');
 Route::get('/shourum',function(){
     return view('shourum');
     });
-    Route::get('/shourums',function(){
+Route::get('/shourums',function(){
         return view('shourums');
-        });   
+        });
+Route::get('/projects','Products@ProjectsshowAll');  
 Route::get   ('/', 'Products@showMain')->name('main');
 
 Route::get   ('/products', 'Products@showAll')->name('products');

@@ -352,6 +352,7 @@
     <?
 
     foreach ($products as $key => $value) {
+       
     ?>@include('includes.products.card', ['value' => $value])<?
 
                                                                 $cardCounter++;

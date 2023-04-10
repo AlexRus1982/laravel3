@@ -93,7 +93,7 @@
         margin-bottom: 40px;
     }
 
-
+   
 
     .reviews__content_small {
         width: 300px;

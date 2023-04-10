@@ -152,9 +152,7 @@
         background-color: #000000a1;
     }
 
-    .shourum__bread-crumps {
-        text-align: left;
-    }
+   
 
     .container-data__row_grey {
         width: 100%;
@@ -174,7 +172,6 @@
         font-size: 14px;
         max-width: 1400px;
         display: flex;
-
         justify-content: flex-start;
 
     }
