@@ -55,7 +55,7 @@
 
     .panel__table {
         display: flex;
-        width: 50%;
+        width: 430px;
         padding: 0;
         margin-bottom: 40px;
         justify-content: space-between;
