@@ -27,6 +27,9 @@
     },
     "dependencies": {
         "bootstrap-vue": "^2.23.1",
-        "vue-router": "^3.6.5"
+        "swiper": "^6.8.4",
+        "vue": "^3.2.45",
+        "vue-router": "^3.6.5",
+        "vueperslides": "^3.5.1"
     }
 }

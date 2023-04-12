@@ -1,0 +1,22 @@
+.projects {
+    display: flex;
+    max-width: 1400px;
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.projects__title {
+    margin-left: 0px;
+    margin-bottom: 15px;
+    color: #000000;
+    font-size: 30px;
+    font-family: 'TildaSansBold', Arial, sans-serif;
+    line-height: 1.55;
+    font-weight: 900;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    display: flex;
+    justify-content: flex-start;
+}

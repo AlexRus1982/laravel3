@@ -13,6 +13,9 @@ Route::get('/shourum',function(){
 Route::get('/shourums',function(){
         return view('shourums');
         });
+        Route::get('/real-projects',function(){
+            return view('real-projects');
+            });       
 Route::get('/projects','Products@ProjectsshowAll');  
 Route::get   ('/', 'Products@showMain')->name('main');
 

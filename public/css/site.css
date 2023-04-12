@@ -1,11 +1,15 @@
 /*------------------------------------------*/
 /* #region main section                     */
 /*------------------------------------------*/
+@import url('./projects.css');
 @font-face {
     font-family: "TildaSans";
     src: local("TildaSans"), url("../fonts/vendor/@fortawesome/fontawesome-free/TildaSans-Light.ttf");
   }
-
+  @font-face {
+    font-family: "TildaSansBold";
+    src: local("TildaSans"), url("../fonts/vendor/@fortawesome/fontawesome-free/TildaSans-Bold.ttf");
+  }
 a{
     color:#000;
 }

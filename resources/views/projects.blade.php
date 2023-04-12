@@ -74,7 +74,7 @@ foreach ($products as $key => $value) {
         margin-bottom: 15px;
         color: #000000;
         font-size: 30px;
-        font-family: 'TildaSans', Arial, sans-serif;
+        font-family: 'TildaSansBold', Arial, sans-serif;
         line-height: 1.55;
         font-weight: 900;
         background-position: center center;
