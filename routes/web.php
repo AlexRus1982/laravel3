@@ -7,6 +7,9 @@
 Route::get('/reviews',function(){
 return view('reviews');
 });
+Route::get('/delivery',function(){
+    return view('delivery');
+    });
 Route::get('/shourum',function(){
     return view('shourum');
     });

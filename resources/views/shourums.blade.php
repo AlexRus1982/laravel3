@@ -262,8 +262,6 @@
   <router-view></router-view>
 
 </div>
-<script>
 
-</script>
 
 @stop

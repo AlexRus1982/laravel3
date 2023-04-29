@@ -28,18 +28,15 @@ Vue.component('navigation2', require('./components/Navigation2.vue').default);
 
 
 const router = new VueRouter({
-  //Подставляет под корневой путь
- // mode: 'history',
+ 
  linkExactActiveClass: "active",
   routes: [
     { path: '/',
-      // a single route can define multiple named components
-      // which will be rendered into <router-view>s with corresponding names.
+      
       components: {
         default: All,
         a: "",
-       
-      }
+        }
     },
     { path: '/Moscow', component: require('./components/Moscow.vue').default },
     { path: '/SanctPeterburg', component: require('./components/SanctPeterburg.vue').default },
